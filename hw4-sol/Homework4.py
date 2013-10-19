@@ -63,7 +63,8 @@ def find_events(ls_symbols, d_data):
             # market is up more then 2%
             # if f_symreturn_today <= -0.03 and f_marketreturn_today >= 0.02:
             #     df_events[s_sym].ix[ldt_timestamps[i]] = 1
-            f_cutoff = 10.0
+            # f_cutoff = 10.0
+            f_cutoff = 5.0
             if f_symprice_today < f_cutoff and f_symprice_yest >= f_cutoff:
                 df_events[s_sym].ix[ldt_timestamps[i]] = 1
                 row_to_enter = [str(ldt_timestamps[i].year), str(ldt_timestamps[i].month), \
